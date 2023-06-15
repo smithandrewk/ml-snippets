@@ -1,7 +1,9 @@
+lossi = []
+
 model.train()
 for i in range(5):
     for (X_tr,y_tr) in tqdm(trainloader):
-        X_tr,y_tr = X_tr.to(device),y_tr.to(device)
+        X_tr,y_tr = X_tr.to(DEVICE),y_tr.to(DEVICE)
         logits = model(X_tr)
         loss = criterion(logits,y_tr)
         optimizer.zero_grad()
