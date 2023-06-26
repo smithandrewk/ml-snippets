@@ -1,7 +1,7 @@
 lossi = []
 
 model.train()
-for i in range(5):
+for i in range(1):
     for (X_tr,y_tr) in tqdm(trainloader):
         X_tr,y_tr = X_tr.to(DEVICE),y_tr.to(DEVICE)
         logits = model(X_tr)
